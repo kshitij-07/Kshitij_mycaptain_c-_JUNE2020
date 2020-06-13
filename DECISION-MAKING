@@ -1,0 +1,75 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i,age,n,vote,gen,left_year; //gen is gender---- left_year is the left over years
+	char par;                       // par is party 
+	cout<<"ENTER THE NUMBER OF APPLICANTS"<<endl;
+	cin>>n;
+	for(i=1;i<=n;i++)
+	{
+		cout<<"APPLICANT NUMBER="<<i<<endl;
+		cout<<"ENTER YOUR AGE"<<endl;
+		cin>>age;
+		if(age<18)
+		{
+			cout<<"YOU ARE NOT ELIGIBLE TO VOTE "<<endl;
+			left_year=18-age;
+			cout<<"YOU CAN VOTE AFTER:"<<left_year<<"YEARS"<<endl;
+		}
+		else
+		{
+			cout<<"YOU ARE ELIGIBLE TO VOTE"<<endl;
+					cout<<"ENTER your gender--(1 for male)--(0 for female)"<<endl;
+					cin>>gen;
+					if(gen==1)
+					{
+						cout<<"HELLO SIR: which party would you vote from-- A,-- B,-- C"<<endl;
+						cin>>par;
+						switch(par)
+						{
+							case'B':
+								cout<<"you have successfully voted for BJP"<<endl;
+								break;
+								
+							case'C':
+								cout<<"you have successfully voted for CONGRESS"<<endl;
+								break;
+								
+							case'A':
+								cout<<"you have successfully voted for AAM AADMI PARTY"<<endl;
+								break;
+								
+							default:
+								cout<<"YOU HAVE VOTED FOR NONE"<<endl;
+								break;
+						}
+					}
+					else
+					{
+						cout<<"HELLO MADAM: which party would you vote from-- A,-- B,-- C"<<endl;
+						cin>>par;
+						switch(par)
+						{
+							case'B':
+								cout<<"you have successfully voted for BJP"<<endl;
+								break;
+								
+							case'C':
+								cout<<"you have successfully voted for CONGRESS"<<endl;
+								break;
+								
+							case'A':
+								cout<<"you have successfully voted for AAM AADMI PARTY"<<endl;
+								break;
+								
+							default:
+								cout<<"YOU HAVE VOTED FOR NONE"<<endl;
+								break;
+						}
+					}
+				
+		}
+	}
+	return 0;
+}
